@@ -23,7 +23,7 @@ Class PessoaDao {
         $consulta->execute();
 
         if($consulta->rowCount() > 0){
-            $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+            $resultado = $consulta->fetchAll(\PDO::FETCH_ASSOC);
             return $resultado;
         }
 
@@ -37,16 +37,16 @@ Class PessoaDao {
         $update->bindValue(1, $p->getNome());
         $update->bindValue(2, $p->getEndereco());
         $update->bindValue(3, $p->getTelefone());
-        $update->bindValue(4, $p->getTelefone());
+        $update->bindValue(4, $p->getId());
 
         $update->execute();
     }
 
-    public function delete($codigo){
+    public function delete($id){
         $sql = "DELETE FROM pessoa WHERE id = ?";
 
         $delete = Conexao::getConexao()->prepare($sql);
-        $delete->bindValue(1, $codigo);
+        $delete->bindValue(1, $id);
         $delete->execute();
 
     }

@@ -4,8 +4,11 @@ namespace Src\Models;
 
 Class Pessoa{
 
-    private $nome, $endereco, $telefone;
+    private $id, $nome, $endereco, $telefone;
 
+    public function setId($id){
+        $this->id = $id;
+    }
     
     public function setNome($nome){
         $this->nome = $nome;
@@ -19,6 +22,10 @@ Class Pessoa{
         $this->telefone = $telefone;
     }
     
+    public function getId(){
+        return $this->id;
+    }
+
     public function getNome(){
         return $this->nome;
     }
