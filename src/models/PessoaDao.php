@@ -30,11 +30,24 @@ Class PessoaDao {
         return [];
     }
 
-    public function update(){
+    public function update(Pessoa $p){
+        $sql = "UPDATE pessoa SET nome = ?, endereco = ?, telefone = ? WHERE id = ?";
 
+        $update = Conexao::getConexao()->prepare($sql);
+        $update->bindValue(1, $p->getNome());
+        $update->bindValue(2, $p->getEndereco());
+        $update->bindValue(3, $p->getTelefone());
+        $update->bindValue(4, $p->getTelefone());
+
+        $update->execute();
     }
 
-    public function delete(){
+    public function delete($codigo){
+        $sql = "DELETE FROM pessoa WHERE id = ?";
+
+        $delete = Conexao::getConexao()->prepare($sql);
+        $delete->bindValue(1, $codigo);
+        $delete->execute();
 
     }
 

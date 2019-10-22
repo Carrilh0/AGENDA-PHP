@@ -1,0 +1,15 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Src\\": "Src/"
+        }
+    },
+    "name": "vitor/crud-php",
+    "authors": [
+        {
+            "name": "Vitor Carrilho",
+            "email": "vitor.carrilho@hotmail.com"
+        }
+    ],
+    "require": {}
+}

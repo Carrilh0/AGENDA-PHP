@@ -1,24 +1,13 @@
 <?php
 
-$db = new PDO("mysql:host=localhost; dbname=agenda",'root','');
+require_once 'vendor/autoload.php';
 
-$sql = "INSERT INTO pessoa VALUES (null,?,?,?)";
+$p = new \Src\Models\Pessoa();
 
-$enviar = $db->prepare($sql);
-$enviar->bindValue(1,'Vitor');
-$enviar->bindValue(2,'3333');
-$enviar->bindValue(3,'444');
+$p->setNome("Vitor");
+$p->setEndereco("Ribeira");
+$p->setTelefone("71984257963");
 
-$enviar->execute();
+$pDao = new \Src\Models\PessoaDao();
 
-$sql = "SELECT * FROM PESSOA";
-$consulta = $db->prepare($sql);
-
-$consulta->execute();
-
-echo '<pre>';
-
-if($consulta->rowCount() > 0){
-    $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
-    print_r($resultado);
-}
+$pDao->create($p);
