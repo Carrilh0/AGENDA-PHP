@@ -6,9 +6,11 @@
 </head>
 
 <body>
+
+
     <!--MENU-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Agenda</a>
+  <a class="navbar-brand" href="/">Agenda</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -17,7 +19,7 @@
     <ul class="navbar-nav mr-auto">
       
     <li class="nav-item">
-        <a class="nav-link" href="#">Cadastrar <span class="sr-only">(página atual)</span></a>
+        <a class="nav-link" href="InserirContato.php">Cadastrar <span class="sr-only">(página atual)</span></a>
       </li>
       
     </ul>
