@@ -1,12 +1,13 @@
 <?php
 
+namespace Src\Controllers;
+
 Class PessoaController {
     
     private $nome, $endereco, $telefone;
 
-    public function __construnct(){
+    public function __construct(){
         $this->nome = $_POST['nome'];
-        teste();
     }
 
     public function teste(){

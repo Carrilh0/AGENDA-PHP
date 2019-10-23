@@ -1,6 +1,6 @@
 <?php 
 require_once('navbar.php');
-require_once('vendor/autoload.php');
+require_once('../vendor/autoload.php');
 
 $pDao = new \Src\Models\PessoaDao();
 
