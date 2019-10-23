@@ -2,15 +2,20 @@
 
 namespace Src\Controllers;
 
-Class PessoaController {
-    
-    private $nome, $endereco, $telefone;
+require_once('../../vendor/autoload.php');
 
-    public function __construct(){
-        $this->nome = $_POST['nome'];
-    }
+$nome = $_POST['nome'];
+$endereco = $_POST['endereco'];
+$telefone = $_POST['telefone'];
 
-    public function teste(){
-        echo 'hello';
-    }
-}
+$pessoa = new \Src\Models\Pessoa();
+$pessoa->setNome($nome);
+$pessoa->setEndereco($endereco);
+$pessoa->setTelefone($telefone);
+
+$cadastrar = new \Src\Models\PessoaDao();
+$cadastrar->create($pessoa);
+
+header('Location: ../../Public/index.php');
+
+

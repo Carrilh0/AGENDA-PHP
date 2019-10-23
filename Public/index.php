@@ -4,8 +4,6 @@ require_once('../vendor/autoload.php');
 
 $pDao = new \Src\Models\PessoaDao();
 
-
-
 ?>
 
 <div class='container'>
