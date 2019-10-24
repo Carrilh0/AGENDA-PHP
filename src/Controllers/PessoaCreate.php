@@ -1,7 +1,7 @@
 <?php
 
 namespace Src\Controllers;
-
+session_start();
 require_once('../../vendor/autoload.php');
 
 $nome = $_POST['nome'];
@@ -14,8 +14,8 @@ $pessoa->setEndereco($endereco);
 $pessoa->setTelefone($telefone);
 
 $cadastrar = new \Src\Models\PessoaDao();
-$cadastrar->create($pessoa);
+if ($cadastrar->create($pessoa)) {
+    $_SESSION['flash'] = "Pessoa cadastrada com sucesso!";
+} 
 
 header('Location: ../../index.php');
-
-

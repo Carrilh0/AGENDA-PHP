@@ -4,15 +4,10 @@ namespace Src\Models;
 
 Class PessoaDao {
 
-    public function create(Pessoa $p){
-        $sql = "INSERT INTO pessoa VALUES (null,?,?,?)";
-
-        $create = Conexao::getConexao()->prepare($sql);
-        $create->bindValue(1, $p->getNome());
-        $create->bindValue(2, $p->getEndereco());
-        $create->bindValue(3, $p->getTelefone());
-
-        $create->execute();
+    public function create(Pessoa $p)
+    {
+        $create = Conexao::getConexao()->prepare("INSERT INTO pessoa(nome, endereco, telefone) VALUES (?,?,?)");
+        return $create->execute([$p->getNome(), $p->getEndereco(), $p->getTelefone()]);
     }
 
     public function read(){
@@ -23,7 +18,7 @@ Class PessoaDao {
         $consulta->execute();
 
         if($consulta->rowCount() > 0){
-            $resultado = $consulta->fetchAll(\PDO::FETCH_ASSOC);
+            $resultado = $consulta->fetchAll(\PDO::FETCH_OBJ);
             return $resultado;
         }
 
@@ -48,6 +43,16 @@ Class PessoaDao {
         $delete = Conexao::getConexao()->prepare($sql);
         $delete->bindValue(1, $id);
         $delete->execute();
+
+    }
+
+    public function find($id){
+        $sql = "SELECT * FROM pessoa WHERE id = ?";
+        $consulta = Conexao::getConexao()->prepare($sql);
+        $consulta->execute([$id]);
+   
+        $resultado = $consulta->fetch(\PDO::FETCH_OBJ);
+        return $resultado;
 
     }
 

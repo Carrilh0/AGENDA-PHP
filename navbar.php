@@ -10,7 +10,7 @@
 
     <!--MENU-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/Public">Agenda</a>
+  <a class="navbar-brand" href="/">Agenda</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -31,7 +31,7 @@
 </nav>
 
     
-<script type="text/javascript"  src="Public/js/jquery-3.3.1.slim.min.js" ></script>
+<script type="text/javascript"  src="Public/js/jquery-3.4.1.min.js" ></script>
 <script type="text/javascript"  src="Public/js/bootstrap.min.js"></script>
 
 

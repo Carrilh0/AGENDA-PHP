@@ -1,6 +1,7 @@
 <?php 
 include('navbar.php');
 require_once('vendor/autoload.php');
+session_start();
 
 $pDao = new \Src\Models\PessoaDao();
 
@@ -14,6 +15,13 @@ $pDao = new \Src\Models\PessoaDao();
 
 <body>
 <div class='container'>
+
+<?php if (isset($_SESSION['flash'])):?>
+   <center><h2><?php echo $_SESSION['flash'];?></h2></center>
+   <?php unset($_SESSION['flash']);?>
+<?php endif;?>
+
+
 <table class="table">
   <thead>
     <tr>
@@ -24,28 +32,24 @@ $pDao = new \Src\Models\PessoaDao();
       <th scope="col">Ação</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-    
-    <?php   
-    
-    foreach($pDao->read() as $teste){
-        echo "<tr>";
-        echo "<th scope='row'> $teste[id]</th>";
-        echo "<td>$teste[nome]</td>";
-        echo "<td>$teste[endereco]</td>";
-        echo "<td> $teste[telefone]</td>";
-        echo "<td><button onClick='editar()' class='btn btn-success btn-sm'>Editar</button >";
-        echo "<a href='/Src/Controllers/RemoverPessoa.php?id=$teste[id]' class='btn btn-danger btn-sm'>Apagar</td>";
-        echo "<td>";
-    }  
-    
-    ?>
-    
-    
-    
-    </tr>
-  </tbody>
+
+  <?php foreach($pDao->read() as $teste):?>
+    <tbody>
+      <tr>
+        <td scope='row'><?php echo  $teste->id;?></td>
+        <td scope='row'><?php echo  $teste->nome;?></td>
+        <td scope='row'><?php echo  $teste->endereco;?></td>
+        <td scope='row'><?php echo  $teste->telefone;?></td>
+        <td>
+          <button onClick='editar(<?php echo $teste->id;?>)' class='btn btn-success btn-sm'>Editar</button>
+        </td>
+        <td>
+          <a href='/Src/Controllers/RemoverPessoa.php' class='btn btn-danger btn-sm'>Apagar
+        </td>
+      </tr>
+    </tbody>
+
+  <?php endforeach;?>
 </table>
 </div>
 
@@ -62,18 +66,16 @@ $pDao = new \Src\Models\PessoaDao();
       <div id="conteudo" class="modal-body">
         ...
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Salvar mudanças</button>
-      </div>
     </div>
   </div>
 </div>
 
 <script>
   function editar(id){
+    
     $('#modalExemplo').modal('show');
-    $("#conteudo").load("InserirContato.php");
+    $("#conteudo").load("editarContato.php?id=<?php echo $teste->id;?>");
+
   }
 </script>
 
