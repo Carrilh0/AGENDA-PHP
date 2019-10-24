@@ -18,7 +18,7 @@ $pessoa = $pDao->find($id);
 <body>
 
 
-    <form action="Src/Controllers/PessoaCreate.php" method="POST" >
+    <form action="Src/Controllers/EditarContato.php" method="POST" >
     <div class="form-row">
         
         <input type="text" value="<?php echo $pessoa->id?>"name="id" hidden>   
@@ -36,7 +36,7 @@ $pessoa = $pDao->find($id);
         <input type="text" class="form-control" value="<?php echo $pessoa->telefone?>" name="telefone" placeholder="(99) 9 99999-9999">
     </div>
     
-    <a  class="btn btn-block btn-primary" href="/Src/Controllers/EditarContato.php">Salvar</a>
+    <button type="submit" class="btn btn-block btn-primary" >Salvar</button>
     </form>
 
 

@@ -72,9 +72,8 @@ $pDao = new \Src\Models\PessoaDao();
 
 <script>
   function editar(id){
-    
     $('#modalExemplo').modal('show');
-    $("#conteudo").load("editarContato.php?id=<?php echo $teste->id;?>");
+    $("#conteudo").load("editarContato.php?id="+id);
 
   }
 </script>
