@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-
+<link rel="stylesheet" href='Public/css/bootstrap.css'>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
     <ul class="navbar-nav mr-auto">
       
     <li class="nav-item">
-        <a class="nav-link" href="Public/InserirContato.php">Cadastrar <span class="sr-only">(página atual)</span></a>
+        <a class="nav-link" href="InserirContato.php">Cadastrar <span class="sr-only">(página atual)</span></a>
       </li>
       
     </ul>
@@ -30,6 +30,10 @@
   </div>
 </nav>
 
-    <link rel="stylesheet" href='../Public/css/bootstrap.css'>
+    
+<script type="text/javascript"  src="Public/js/jquery-3.3.1.slim.min.js" ></script>
+<script type="text/javascript"  src="Public/js/bootstrap.min.js"></script>
+
+
 
 </body>

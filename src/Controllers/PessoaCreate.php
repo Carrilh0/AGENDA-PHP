@@ -16,6 +16,6 @@ $pessoa->setTelefone($telefone);
 $cadastrar = new \Src\Models\PessoaDao();
 $cadastrar->create($pessoa);
 
-header('Location: ../../Public/index.php');
+header('Location: ../../index.php');
 
 
