@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-<link rel="stylesheet" href='Public/css/bootstrap.css'>
+<link rel="stylesheet" href='public/css/bootstrap.css'>
 </head>
 
 <body>

@@ -44,7 +44,7 @@ $pDao = new \Src\Models\PessoaDao();
           <button onClick='editar(<?php echo $teste->id;?>)' class='btn btn-success btn-sm'>Editar</button>
         </td>
         <td>
-          <a href='/Src/Controllers/RemoverPessoa.php?id=<?php echo $teste->id;?>' class='btn btn-danger btn-sm'>Apagar
+          <a href='/src/controllers/RemoverPessoa.php?id=<?php echo $teste->id;?>' class='btn btn-danger btn-sm'>Apagar
         </td>
       </tr>
     </tbody>
