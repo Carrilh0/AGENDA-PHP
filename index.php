@@ -3,7 +3,7 @@ include('navbar.php');
 require_once('vendor/autoload.php');
 session_start();
 
-$pDao = new \src\models\PessoaDao();
+$pDao = new \Src\Models\PessoaDao();
 
 ?>
 <!DOCTYPE html>
