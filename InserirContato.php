@@ -12,7 +12,7 @@ require_once('navbar.php');
 
 <div class='container' style="margin-top: 5%">
 
-    <form action="Src/Controllers/PessoaCreate.php" method="POST" >
+    <form action="src/controllers/PessoaCreate.php" method="POST" >
     <div class="form-row">
         <div class="form-group col-md-6">
         <label for="nome">Nome</label>

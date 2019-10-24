@@ -18,7 +18,7 @@ $pessoa = $pDao->find($id);
 <body>
 
 
-    <form action="Src/Controllers/EditarContato.php" method="POST" >
+    <form action="src/controllers/EditarContato.php" method="POST" >
     <div class="form-row">
         
         <input type="text" value="<?php echo $pessoa->id?>"name="id" hidden>   
