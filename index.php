@@ -81,7 +81,7 @@ $pDao = new \src\models\PessoaDao();
     var text = $(this).val();
     $('table tbody').find('tr').each(function(){
       var conteudo = $(this).find('td').text();
-      var corresponde = conteudo.toLowerCase().indexOf(text) >0;
+      var corresponde = conteudo.toLowerCase().indexOf(text) >=0;
       $(this).css('display', corresponde ? '' : 'none');
     });
   });

@@ -33,13 +33,18 @@ $pessoa = $pDao->find($id);
     </div>
     <div class="form-group">
         <label for="telefone">Telefone</label>
-        <input type="text" class="form-control" value="<?php echo $pessoa->telefone?>" name="telefone" placeholder="(99) 9 99999-9999" required minlength=12>
+        <input type="text" class="form-control" value="<?php echo $pessoa->telefone?>" name="telefone" id="telefone" placeholder="(99) 9 99999-9999" required minlength=12>
     </div>
     
     <button type="submit" class="btn btn-block btn-primary" >Salvar</button>
     </form>
 
 
+<script>
+    $(document).ready(function(){
+    $('#telefone').mask('(00) 0 0000-0000')
+    });
+</script>
 
 </body>
 
