@@ -10,7 +10,7 @@ $pDao = new \Src\Models\PessoaDao();
 <html lang="pt-br">
 
 <head>
-
+<title>Contatos PHP</title>
 </head>
 
 <body>
@@ -85,6 +85,12 @@ $pDao = new \Src\Models\PessoaDao();
       $(this).css('display', corresponde ? '' : 'none');
     });
   });
+
+
+  function listItems(items, pageActual, limitItems){
+        let result = [];
+        return result;
+  };
 
 </script>
 

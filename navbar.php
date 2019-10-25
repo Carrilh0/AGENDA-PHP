@@ -23,10 +23,9 @@
       </li>
       
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <div class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" id="search" name="search" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-    </form>
+    </div>
   </div>
 </nav>
 
@@ -37,7 +36,7 @@
 
 <script>
 $(document).ready(function(){
-$('#nome').mask('(99) 9 99999-9999')
+$('#telefone').mask('(00) 0 0000-0000')
 });
 </script>
 
