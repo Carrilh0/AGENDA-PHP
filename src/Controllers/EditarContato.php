@@ -1,6 +1,6 @@
 <?php
 
-namespace Src\Controllers;
+namespace src\controllers;
 session_start();
 require_once('../../vendor/autoload.php');
 
@@ -9,13 +9,13 @@ $nome = $_POST['nome'];
 $endereco = $_POST['endereco'];
 $telefone = $_POST['telefone'];
 
-$pessoa = new \Src\Models\Pessoa();
+$pessoa = new \src\models\Pessoa();
 $pessoa->setId($id);
 $pessoa->setNome($nome);
 $pessoa->setEndereco($endereco);
 $pessoa->setTelefone($telefone);
 
-$cadastrar = new \Src\Models\PessoaDao();
+$cadastrar = new \src\models\PessoaDao();
 if ($cadastrar->update($pessoa)) {
     $_SESSION['flash'] = "Pessoa atualizada com sucesso!";
 } 

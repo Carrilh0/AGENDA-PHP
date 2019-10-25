@@ -24,16 +24,16 @@ $pessoa = $pDao->find($id);
         <input type="text" value="<?php echo $pessoa->id?>"name="id" hidden>   
         <div class="form-group col-md-6">
         <label for="nome">Nome</label>
-        <input type="text" class="form-control" value="<?php echo $pessoa->nome?>"name="nome" placeholder="Nome">
+        <input type="text" class="form-control" value="<?php echo $pessoa->nome?>"name="nome" placeholder="Nome" required>
         </div>
         <div class="form-group col-md-6">
         <label for="endereco">Endereço</label>
-        <input type="text" class="form-control" value="<?php echo $pessoa->endereco?>" name="endereco" placeholder="Endereço...">
+        <input type="text" class="form-control" value="<?php echo $pessoa->endereco?>" name="endereco" placeholder="Endereço..." required>
         </div>
     </div>
     <div class="form-group">
         <label for="telefone">Telefone</label>
-        <input type="text" class="form-control" value="<?php echo $pessoa->telefone?>" name="telefone" placeholder="(99) 9 99999-9999">
+        <input type="text" class="form-control" value="<?php echo $pessoa->telefone?>" name="telefone" placeholder="(99) 9 99999-9999" required minlength=12>
     </div>
     
     <button type="submit" class="btn btn-block btn-primary" >Salvar</button>

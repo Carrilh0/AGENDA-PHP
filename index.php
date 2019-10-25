@@ -3,7 +3,7 @@ include('navbar.php');
 require_once('vendor/autoload.php');
 session_start();
 
-$pDao = new \Src\Models\PessoaDao();
+$pDao = new \src\models\PessoaDao();
 
 ?>
 <!DOCTYPE html>
@@ -85,12 +85,6 @@ $pDao = new \Src\Models\PessoaDao();
       $(this).css('display', corresponde ? '' : 'none');
     });
   });
-
-
-  function listItems(items, pageActual, limitItems){
-        let result = [];
-        return result;
-  };
 
 </script>
 

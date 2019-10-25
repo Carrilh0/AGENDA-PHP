@@ -1,12 +1,12 @@
 <?php
 
-namespace Src\Controllers;
+namespace src\controllers;
 
 require_once('../../vendor/autoload.php');
 
 $id = $_GET['id'];
 
-$cadastrar = new \Src\Models\PessoaDao();
+$cadastrar = new \src\models\PessoaDao();
 $cadastrar->delete($id);
 
 header('Location: ../../index.php');
