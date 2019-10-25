@@ -3,7 +3,7 @@ require_once('vendor/autoload.php');
 
 $id = $_GET['id'];
 
-$pDao = new \Src\Models\PessoaDao();
+$pDao = new \src\models\PessoaDao();
 $pessoa = $pDao->find($id);
 
 ?>
