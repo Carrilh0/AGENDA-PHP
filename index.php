@@ -76,6 +76,16 @@ $pDao = new \Src\Models\PessoaDao();
     $("#conteudo").load("editarContato.php?id="+id);
 
   }
+
+  $('#search').keyup(function(){
+    var text = $(this).val();
+    $('table tbody').find('tr').each(function(){
+      var conteudo = $(this).find('td').text();
+      var corresponde = conteudo.toLowerCase().indexOf(text) >0;
+      $(this).css('display', corresponde ? '' : 'none');
+    });
+  });
+
 </script>
 
 </body>
