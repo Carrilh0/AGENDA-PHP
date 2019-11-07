@@ -3,6 +3,28 @@
 
 <head>
 <link rel="stylesheet" href='public/css/bootstrap.css'>
+<style>
+  body {
+    background:#f2f4f5;
+  }
+
+  .my-content {
+    background:white;
+    border:1px solid #dee2e6;
+    border-radius:3px;
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+
+  .my-content h2 {
+    margin-bottom:40px;
+    opacity:0.70;
+  }
+
+  th {
+    background:#f2f4f5;
+  }
+</style>
 </head>
 
 <body>

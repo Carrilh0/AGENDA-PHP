@@ -1,19 +1,17 @@
 <?php
 
-namespace src\models;
+namespace src\database;
 
-class Conexao {
-    
+class Conexao 
+{
     private static $instance;
 
-    public static function getConexao(){
-
-        if (!isset(self::$instance)){
+    public static function getConexao()
+    {
+        if ( ! isset(self::$instance)) { 
             self::$instance = new \PDO("mysql:host=localhost; dbname=agenda",'root','');
         }
 
         return self::$instance;
     }
-
-
 }
